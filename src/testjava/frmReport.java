@@ -5,8 +5,12 @@
  */
 package testjava;
 
+import java.beans.PropertyVetoException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JFrame;
 
 /**
  *
@@ -19,7 +23,7 @@ public class frmReport extends javax.swing.JFrame {
      */
     public frmReport() {
         initComponents();
-        
+        this.setExtendedState(this.getExtendedState()|JFrame.MAXIMIZED_BOTH);
 //    JRDataSource dataSource = null;
 //
 //        Map parameters = new HashMap();
@@ -86,6 +90,11 @@ public class frmReport extends javax.swing.JFrame {
         jMenu3.add(jMenuItem1);
 
         jMenuItem2.setText("District");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         jMenu3.add(jMenuItem2);
 
         jMenu2.add(jMenu3);
@@ -117,8 +126,29 @@ public class frmReport extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        // TODO add your handling code here:
+        
+            infTest test = new infTest();
+            test.setVisible(true);
+            jDesktopPane1.add(test);
+           selectLastOpenedInternalFrame();
+        try {
+            test.setSelected(true);
+        } catch (PropertyVetoException ex) {
+            Logger.getLogger(frmReport.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        infDistrict district = new infDistrict();
+            district.setVisible(true);
+            jDesktopPane1.add(district);
+           selectLastOpenedInternalFrame();
+        try {
+            district.setSelected(true);
+        } catch (PropertyVetoException ex) {
+            Logger.getLogger(frmReport.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -166,4 +196,17 @@ public class frmReport extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     // End of variables declaration//GEN-END:variables
+
+    private void selectLastOpenedInternalFrame() {
+             jDesktopPane1.getDesktopManager().activateFrame((jDesktopPane1.getAllFrames()[jDesktopPane1.getAllFrames().length-1]));
+            jDesktopPane1.setSelectedFrame(jDesktopPane1.getAllFrames()[jDesktopPane1.getAllFrames().length-1]);
+//            try {
+//                jDesktopPane1.getAllFrames()[jDesktopPane1.getAllFrames().length-1].setSelected(true);
+////                if(jDesktopPane1.getAllFrames().length > 1){
+////                    jDesktopPane1.getAllFrames()[jDesktopPane1.getAllFrames().length-2].setSelected(false);
+////                }
+//            } catch (PropertyVetoException ex) {
+//                Logger.getLogger(frmReport.class.getName()).log(Level.SEVERE, null, ex);
+//            }
+    }
 }
