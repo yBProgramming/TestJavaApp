@@ -32,6 +32,7 @@ public class infTest extends javax.swing.JInternalFrame {
         setClosable(true);
         setIconifiable(true);
         setMaximizable(true);
+        setResizable(true);
         setTitle("Province");
         setVisible(true);
 

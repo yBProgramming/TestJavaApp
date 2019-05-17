@@ -5,6 +5,7 @@
  */
 package testjava;
 
+import java.awt.Dimension;
 import java.beans.PropertyVetoException;
 import java.util.HashMap;
 import java.util.Map;
@@ -72,12 +73,16 @@ public class frmReport extends javax.swing.JFrame {
         jMenuBar1.setFont(new java.awt.Font("Phetsarath OT", 0, 18)); // NOI18N
         jMenuBar1.setPreferredSize(new java.awt.Dimension(56, 40));
 
-        jMenu1.setText("Products Logo");
+        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/ic-logo.png"))); // NOI18N
+        jMenu1.setText("CS Bank");
         jMenu1.setFont(new java.awt.Font("Phetsarath OT", 1, 14)); // NOI18N
+        jMenu1.setMargin(new java.awt.Insets(0, 0, 0, 30));
         jMenuBar1.add(jMenu1);
 
+        jMenu2.setBorder(null);
         jMenu2.setText("Manager");
         jMenu2.setFont(new java.awt.Font("Phetsarath OT", 1, 14)); // NOI18N
+        jMenu2.setMargin(new java.awt.Insets(0, 0, 0, 10));
 
         jMenu3.setText("Address");
 
@@ -101,12 +106,16 @@ public class frmReport extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu2);
 
+        jMenu4.setBorder(null);
         jMenu4.setText("Services");
         jMenu4.setFont(new java.awt.Font("Phetsarath OT", 1, 14)); // NOI18N
+        jMenu4.setMargin(new java.awt.Insets(0, 0, 0, 10));
         jMenuBar1.add(jMenu4);
 
+        jMenu5.setBorder(null);
         jMenu5.setText("Report");
         jMenu5.setFont(new java.awt.Font("Phetsarath OT", 1, 14)); // NOI18N
+        jMenu5.setMargin(new java.awt.Insets(0, 0, 0, 10));
         jMenuBar1.add(jMenu5);
 
         setJMenuBar(jMenuBar1);
@@ -129,6 +138,9 @@ public class frmReport extends javax.swing.JFrame {
         
             infTest test = new infTest();
             test.setVisible(true);
+            Dimension desktopSize = jDesktopPane1.getSize();
+            Dimension jInternalFrameSize = test.getSize();
+            test.setLocation((desktopSize.width - jInternalFrameSize.width)/2, (desktopSize.height- jInternalFrameSize.height)/2);
             jDesktopPane1.add(test);
            selectLastOpenedInternalFrame();
         try {
@@ -139,8 +151,11 @@ public class frmReport extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        infDistrict district = new infDistrict();
+            infDistrict district = new infDistrict();
             district.setVisible(true);
+            Dimension desktopSize = jDesktopPane1.getSize();
+            Dimension jInternalFrameSize = district.getSize();
+            district.setLocation((desktopSize.width - jInternalFrameSize.width)/2, (desktopSize.height- jInternalFrameSize.height)/2);
             jDesktopPane1.add(district);
            selectLastOpenedInternalFrame();
         try {
