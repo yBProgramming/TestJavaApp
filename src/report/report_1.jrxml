@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="72dc333e-6078-4ed8-a47a-1d9b7746321e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     v_customer_requirements.`requirements_id` AS v_customer_requirements_requirements_id,
+     v_customer_requirements.`customer_name` AS v_customer_requirements_customer_name,
+     v_customer_requirements.`customer_type_name` AS v_customer_requirements_customer_type_name,
+     v_customer_requirements.`customer_tel` AS v_customer_requirements_customer_tel,
+     v_customer_requirements.`detail` AS v_customer_requirements_detail,
+     v_customer_requirements.`documents` AS v_customer_requirements_documents,
+     v_customer_requirements.`customer_signature` AS v_customer_requirements_customer_signature,
+     v_customer_requirements.`deposit_amount` AS v_customer_requirements_deposit_amount,
+     v_customer_requirements.`customer_interest` AS v_customer_requirements_customer_interest,
+     v_customer_requirements.`normal_interest` AS v_customer_requirements_normal_interest,
+     v_customer_requirements.`staff_note` AS v_customer_requirements_staff_note,
+     v_customer_requirements.`currency_id` AS v_customer_requirements_currency_id,
+     v_customer_requirements.`cancle_comment` AS v_customer_requirements_cancle_comment,
+     v_customer_requirements.`edit_count` AS v_customer_requirements_edit_count,
+     v_customer_requirements.`edit_date` AS v_customer_requirements_edit_date,
+     v_customer_requirements.`edit_request` AS v_customer_requirements_edit_request,
+     v_customer_requirements.`currency_code` AS v_customer_requirements_currency_code,
+     v_customer_requirements.`currency_unit` AS v_customer_requirements_currency_unit,
+     v_customer_requirements.`currency_name_la` AS v_customer_requirements_currency_name_la,
+     v_customer_requirements.`interest_flexible_id` AS v_customer_requirements_interest_flexible_id,
+     v_customer_requirements.`max_flexible` AS v_customer_requirements_max_flexible,
+     v_customer_requirements.`deposit_type_id` AS v_customer_requirements_deposit_type_id,
+     v_customer_requirements.`deposit_type` AS v_customer_requirements_deposit_type,
+     v_customer_requirements.`total_days` AS v_customer_requirements_total_days,
+     v_customer_requirements.`account_class` AS v_customer_requirements_account_class,
+     v_customer_requirements.`aclass_desc_la` AS v_customer_requirements_aclass_desc_la,
+     v_customer_requirements.`created_date` AS v_customer_requirements_created_date,
+     v_customer_requirements.`created_user` AS v_customer_requirements_created_user,
+     v_customer_requirements.`created_user_name` AS v_customer_requirements_created_user_name,
+     v_customer_requirements.`created_user_division_id` AS v_customer_requirements_created_user_division_id,
+     v_customer_requirements.`created_user_division_name` AS v_customer_requirements_created_user_division_name,
+     v_customer_requirements.`created_user_depart_id` AS v_customer_requirements_created_user_depart_id,
+     v_customer_requirements.`created_user_department_name` AS v_customer_requirements_created_user_department_name,
+     v_customer_requirements.`created_user_branch_code` AS v_customer_requirements_created_user_branch_code,
+     v_customer_requirements.`created_user_branch_name` AS v_customer_requirements_created_user_branch_name,
+     v_customer_requirements.`approved_status` AS v_customer_requirements_approved_status,
+     v_customer_requirements.`approved_date` AS v_customer_requirements_approved_date,
+     v_customer_requirements.`approved_user` AS v_customer_requirements_approved_user,
+     v_customer_requirements.`approved_user_name` AS v_customer_requirements_approved_user_name,
+     v_customer_requirements.`requirements_status` AS v_customer_requirements_requirements_status,
+     v_customer_requirements.`customer_occupation` AS v_customer_requirements_customer_occupation,
+     v_customer_requirements.`customer_type` AS v_customer_requirements_customer_type
+FROM
+     `v_customer_requirements` v_customer_requirements]]>
+	</queryString>
+	<field name="v_customer_requirements_requirements_id" class="java.lang.String"/>
+	<field name="v_customer_requirements_customer_name" class="java.lang.String"/>
+	<field name="v_customer_requirements_customer_type_name" class="java.lang.String"/>
+	<field name="v_customer_requirements_customer_tel" class="java.lang.String"/>
+	<field name="v_customer_requirements_detail" class="java.lang.String"/>
+	<field name="v_customer_requirements_documents" class="java.lang.String"/>
+	<field name="v_customer_requirements_customer_signature" class="java.lang.String"/>
+	<field name="v_customer_requirements_deposit_amount" class="java.lang.Double"/>
+	<field name="v_customer_requirements_customer_interest" class="java.lang.Float"/>
+	<field name="v_customer_requirements_normal_interest" class="java.lang.Float"/>
+	<field name="v_customer_requirements_staff_note" class="java.lang.String"/>
+	<field name="v_customer_requirements_currency_id" class="java.lang.String"/>
+	<field name="v_customer_requirements_cancle_comment" class="java.lang.String"/>
+	<field name="v_customer_requirements_edit_count" class="java.lang.Integer"/>
+	<field name="v_customer_requirements_edit_date" class="java.sql.Timestamp"/>
+	<field name="v_customer_requirements_edit_request" class="java.lang.Integer"/>
+	<field name="v_customer_requirements_currency_code" class="java.lang.String"/>
+	<field name="v_customer_requirements_currency_unit" class="java.lang.String"/>
+	<field name="v_customer_requirements_currency_name_la" class="java.lang.String"/>
+	<field name="v_customer_requirements_interest_flexible_id" class="java.lang.String"/>
+	<field name="v_customer_requirements_max_flexible" class="java.lang.Double"/>
+	<field name="v_customer_requirements_deposit_type_id" class="java.lang.String"/>
+	<field name="v_customer_requirements_deposit_type" class="java.lang.String"/>
+	<field name="v_customer_requirements_total_days" class="java.lang.Integer"/>
+	<field name="v_customer_requirements_account_class" class="java.lang.String"/>
+	<field name="v_customer_requirements_aclass_desc_la" class="java.lang.String"/>
+	<field name="v_customer_requirements_created_date" class="java.sql.Timestamp"/>
+	<field name="v_customer_requirements_created_user" class="java.lang.String"/>
+	<field name="v_customer_requirements_created_user_name" class="java.lang.String"/>
+	<field name="v_customer_requirements_created_user_division_id" class="java.lang.String"/>
+	<field name="v_customer_requirements_created_user_division_name" class="java.lang.String"/>
+	<field name="v_customer_requirements_created_user_depart_id" class="java.lang.String"/>
+	<field name="v_customer_requirements_created_user_department_name" class="java.lang.String"/>
+	<field name="v_customer_requirements_created_user_branch_code" class="java.lang.String"/>
+	<field name="v_customer_requirements_created_user_branch_name" class="java.lang.String"/>
+	<field name="v_customer_requirements_approved_status" class="java.lang.String"/>
+	<field name="v_customer_requirements_approved_date" class="java.sql.Timestamp"/>
+	<field name="v_customer_requirements_approved_user" class="java.lang.String"/>
+	<field name="v_customer_requirements_approved_user_name" class="java.lang.String"/>
+	<field name="v_customer_requirements_requirements_status" class="java.lang.String"/>
+	<field name="v_customer_requirements_customer_occupation" class="java.lang.String"/>
+	<field name="v_customer_requirements_customer_type" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="138" splitType="Stretch">
+			<image>
+				<reportElement x="249" y="0" width="60" height="62" uuid="3756094a-596f-4f46-b77e-a7f9404b4e2f"/>
+				<imageExpression><![CDATA["C:\\Users\\DELL\\Downloads\\ic-logo.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="0" y="63" width="555" height="20" uuid="f0c125f1-5950-4ef3-8cf4-7599b57944a4"/>
+				<textElement textAlignment="Center">
+					<font fontName="Phetsarath OT"/>
+				</textElement>
+				<text><![CDATA[ສາທາລະນະລັດ ປະຊາທິປະໄຕ ປະຊາຊົນລາວ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="83" width="555" height="20" uuid="291bbed2-9f58-4dd7-9abf-b910b8659c0d"/>
+				<textElement textAlignment="Center">
+					<font fontName="Phetsarath OT"/>
+				</textElement>
+				<text><![CDATA[ສັນຕິພ່າບ ເອກະລາດ ປະຊາທິປະໄຕ ເອກະພາບ ວັດທະນະຖາວອນ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="103" width="555" height="35" uuid="ec3f0938-7a04-4276-84fd-d6ba6bc35c87"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reporting]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="35" uuid="65c9de77-806b-4159-b7d8-f64db76884d8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customer Requirements]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="27" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="61" height="20" uuid="01117d63-6751-4187-b34d-e290268c9605"/>
+				<textElement textAlignment="Center">
+					<font fontName="Phetsarath OT" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ລະຫັດ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="61" y="0" width="90" height="20" uuid="6cace31a-afb8-42bd-bde6-9e9720259192"/>
+				<textElement textAlignment="Center">
+					<font fontName="Phetsarath OT" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ຊື່ລູກຄ້າ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="151" y="0" width="49" height="20" uuid="e7000427-6b8a-45d4-8e84-9b39c20f928d"/>
+				<textElement textAlignment="Center">
+					<font fontName="Phetsarath OT" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ປະເພດ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="0" width="64" height="20" uuid="61cf216e-8de4-43ab-96e8-ec3c1fbc3441"/>
+				<textElement textAlignment="Center">
+					<font fontName="Phetsarath OT" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ເບີໂທ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="264" y="0" width="63" height="20" uuid="05ecd60b-a829-490f-ae93-7635fd169ffe"/>
+				<textElement textAlignment="Center">
+					<font fontName="Phetsarath OT" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ຈ/ນ ເງິນ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="327" y="0" width="44" height="20" uuid="d4ea27f7-eb1b-4f77-a5a5-6beea751bfb4"/>
+				<textElement textAlignment="Center">
+					<font fontName="Phetsarath OT" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ດອກເບ້ຍ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="371" y="0" width="42" height="20" uuid="0707da3a-97da-4630-8be5-20aacbf61e41"/>
+				<textElement textAlignment="Center">
+					<font fontName="Phetsarath OT" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ສະກຸນ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="515" y="0" width="40" height="20" uuid="5c9c31f4-cf27-4529-98bd-bc2b00b154f8"/>
+				<textElement textAlignment="Center">
+					<font fontName="Phetsarath OT" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ຍິດຍຸ່ນ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="413" y="0" width="61" height="20" uuid="43f96cc6-49d1-4cd6-81c0-2c3f887cf550"/>
+				<textElement textAlignment="Center">
+					<font fontName="Phetsarath OT" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ໄລຍະຝາກ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="474" y="0" width="41" height="20" uuid="9fd4077a-af8c-440d-a9d7-52aec6f29298"/>
+				<textElement textAlignment="Center">
+					<font fontName="Phetsarath OT" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ປົກກະຕິ]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="61" height="20" uuid="e644b4c6-08cc-4220-a096-5961d8e511ab"/>
+				<textFieldExpression><![CDATA[$F{v_customer_requirements_requirements_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="61" y="0" width="90" height="20" uuid="679ab44e-fd3d-4f64-b3f6-b3f86cf5f39f"/>
+				<textElement>
+					<font fontName="Phetsarath OT"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{v_customer_requirements_customer_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="151" y="0" width="49" height="20" uuid="860fd59d-a53a-4434-9475-e0216b9b9a03"/>
+				<textElement>
+					<font fontName="Phetsarath OT"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{v_customer_requirements_customer_type_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="64" height="20" uuid="63e986c0-29bd-4a98-ac81-a8185e844e0d"/>
+				<textFieldExpression><![CDATA[$F{v_customer_requirements_customer_tel}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="267" y="0" width="60" height="20" uuid="a37932bd-259c-4b64-ae40-f91a950a3ed4"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{v_customer_requirements_deposit_amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="327" y="0" width="44" height="20" uuid="229a1358-3f9c-4d19-9b36-b357764cefd4"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{v_customer_requirements_customer_interest}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="474" y="0" width="41" height="20" uuid="43ae75b8-a9f8-4f30-862a-4f4ad1b5d95f"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{v_customer_requirements_normal_interest}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="371" y="0" width="42" height="20" uuid="61495d43-9933-4b13-9d6b-abbc37a21933"/>
+				<textElement>
+					<font fontName="Phetsarath OT"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{v_customer_requirements_currency_name_la}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="515" y="0" width="40" height="20" uuid="c9891a9f-84cd-429a-8122-5617ad0ed90d"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{v_customer_requirements_max_flexible}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="413" y="0" width="61" height="20" uuid="44020f79-cac2-4234-b445-ec4b76876eb8"/>
+				<textElement>
+					<font fontName="Phetsarath OT"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{v_customer_requirements_aclass_desc_la}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="21" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="27" splitType="Stretch">
+			<staticText>
+				<reportElement x="431" y="7" width="124" height="20" uuid="91bf223d-0ac1-4bbf-8abf-d8fb69c1e7f7"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="82" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="11" width="105" height="20" uuid="1b39d582-5a2c-46fd-9454-6d9426c87977"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Phetsarath OT" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ລາຍເຊັນຜູ້ອຳນວຍການ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="123" y="11" width="161" height="20" uuid="b0ca9fa1-5122-45c8-9e6c-6d97fd103fd8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Phetsarath OT" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ລາຍເຊັນຫົວໜ້າພະແນກ/ສູນ/ສາຂາ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="311" y="11" width="120" height="20" uuid="390affcb-1617-4e6e-a668-2aaa47ae88aa"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Phetsarath OT" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ລາຍເຊັນຫົວໜ້າຂະແໜງ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="453" y="11" width="102" height="20" uuid="b6774419-fc1c-4944-8e1c-35c8d27be0ef"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Phetsarath OT" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ລາຍເຊັນວິຊາການ]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>
