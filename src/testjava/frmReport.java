@@ -5,6 +5,8 @@
  */
 package testjava;
 
+import com.sun.java.swing.plaf.motif.MotifDesktopPaneUI;
+import com.sun.java.swing.plaf.windows.WindowsDesktopPaneUI;
 import java.awt.Dimension;
 import java.beans.PropertyVetoException;
 import java.util.HashMap;
@@ -12,6 +14,11 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.plaf.DesktopPaneUI;
+import javax.swing.plaf.basic.BasicDesktopPaneUI;
+import javax.swing.plaf.multi.MultiDesktopPaneUI;
+import javax.swing.plaf.synth.SynthDesktopPaneUI;
 
 /**
  *
@@ -25,6 +32,7 @@ public class frmReport extends javax.swing.JFrame {
     public frmReport() {
         initComponents();
         this.setExtendedState(this.getExtendedState()|JFrame.MAXIMIZED_BOTH);
+        //jDesktopPane1.setUI(new MotifDesktopPaneUI());
 //    JRDataSource dataSource = null;
 //
 //        Map parameters = new HashMap();
@@ -45,19 +53,54 @@ public class frmReport extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        infLogin = new javax.swing.JInternalFrame();
+        jLabel1 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jPasswordField1 = new javax.swing.JPasswordField();
+        dlgLogin = new javax.swing.JDialog();
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
+        mnManage = new javax.swing.JMenu();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         jMenu5 = new javax.swing.JMenu();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        infLogin.setClosable(true);
+        infLogin.setVisible(true);
+        infLogin.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jDesktopPane1.setBackground(new java.awt.Color(255, 204, 204));
+        jLabel1.setText("jLabel1");
+        infLogin.getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, -1, -1));
+
+        jTextField1.setText("jTextField1");
+        infLogin.getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, 340, -1));
+
+        jPasswordField1.setText("jPasswordField1");
+        infLogin.getContentPane().add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 340, -1));
+
+        infLogin.getAccessibleContext().setAccessibleParent(jDesktopPane1);
+
+        dlgLogin.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        dlgLogin.setMaximumSize(new java.awt.Dimension(570, 334));
+        dlgLogin.setMinimumSize(new java.awt.Dimension(570, 334));
+        dlgLogin.setModal(true);
+        dlgLogin.setResizable(false);
+
+        javax.swing.GroupLayout dlgLoginLayout = new javax.swing.GroupLayout(dlgLogin.getContentPane());
+        dlgLogin.getContentPane().setLayout(dlgLoginLayout);
+        dlgLoginLayout.setHorizontalGroup(
+            dlgLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 570, Short.MAX_VALUE)
+        );
+        dlgLoginLayout.setVerticalGroup(
+            dlgLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 334, Short.MAX_VALUE)
+        );
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
@@ -75,14 +118,14 @@ public class frmReport extends javax.swing.JFrame {
 
         jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/ic-logo.png"))); // NOI18N
         jMenu1.setText("CS Bank");
-        jMenu1.setFont(new java.awt.Font("Phetsarath OT", 1, 14)); // NOI18N
+        jMenu1.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         jMenu1.setMargin(new java.awt.Insets(0, 0, 0, 30));
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setBorder(null);
-        jMenu2.setText("Manager");
-        jMenu2.setFont(new java.awt.Font("Phetsarath OT", 1, 14)); // NOI18N
-        jMenu2.setMargin(new java.awt.Insets(0, 0, 0, 10));
+        mnManage.setBorder(null);
+        mnManage.setText("Manager");
+        mnManage.setFont(new java.awt.Font("Phetsarath OT", 1, 14)); // NOI18N
+        mnManage.setMargin(new java.awt.Insets(0, 0, 0, 10));
 
         jMenu3.setText("Address");
 
@@ -102,9 +145,9 @@ public class frmReport extends javax.swing.JFrame {
         });
         jMenu3.add(jMenuItem2);
 
-        jMenu2.add(jMenu3);
+        mnManage.add(jMenu3);
 
-        jMenuBar1.add(jMenu2);
+        jMenuBar1.add(mnManage);
 
         jMenu4.setBorder(null);
         jMenu4.setText("Services");
@@ -116,6 +159,16 @@ public class frmReport extends javax.swing.JFrame {
         jMenu5.setText("Report");
         jMenu5.setFont(new java.awt.Font("Phetsarath OT", 1, 14)); // NOI18N
         jMenu5.setMargin(new java.awt.Insets(0, 0, 0, 10));
+        jMenu5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu5MouseClicked(evt);
+            }
+        });
+        jMenu5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu5ActionPerformed(evt);
+            }
+        });
         jMenuBar1.add(jMenu5);
 
         setJMenuBar(jMenuBar1);
@@ -165,6 +218,16 @@ public class frmReport extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
+    private void jMenu5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu5ActionPerformed
+       
+    }//GEN-LAST:event_jMenu5ActionPerformed
+
+    private void jMenu5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu5MouseClicked
+        
+        dlgLogin.show(true);
+       // infLogin.setVisible(true);
+    }//GEN-LAST:event_jMenu5MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -201,15 +264,20 @@ public class frmReport extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JDialog dlgLogin;
+    private javax.swing.JInternalFrame infLogin;
     private javax.swing.JDesktopPane jDesktopPane1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JMenu mnManage;
     // End of variables declaration//GEN-END:variables
 
     private void selectLastOpenedInternalFrame() {
